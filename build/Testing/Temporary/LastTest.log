@@ -1,0 +1,31 @@
+Start testing: Aug 23 12:38 EDT
+----------------------------------------------------------
+1/1 Testing: qa_dB_reduced_voltage_received
+1/1 Test: qa_dB_reduced_voltage_received
+Command: "/usr/bin/sh" "qa_dB_reduced_voltage_received_test.sh"
+Directory: /home/lola/prefix/gnu3.8/acoustics/phaseZero/gr-Acoustic_Atten_conversions/build/python/Acoustic_Atten_conversions
+"qa_dB_reduced_voltage_received" start time: Aug 23 12:38 EDT
+Output:
+----------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.005s
+
+OK
+volt in stream [1. 1.]
+atten_in_dBs [20. 10.]
+step 1
+volt in stream [1.]
+atten_in_dBs [5.]
+step 1
+expected_v_out test result (0.3678, 0.6065, 0.7788)
+py code result [0.3678794503211975, 0.6065306663513184, 0.7788007855415344]
+<end of output>
+Test time =   0.23 sec
+----------------------------------------------------------
+Test Passed.
+"qa_dB_reduced_voltage_received" end time: Aug 23 12:38 EDT
+"qa_dB_reduced_voltage_received" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 23 12:38 EDT

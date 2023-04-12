@@ -1,0 +1,32 @@
+find_package(PkgConfig)
+
+PKG_CHECK_MODULES(PC_GR_ACOUSTIC_ATTEN_CONVERSIONS gnuradio-Acoustic_Atten_conversions)
+
+FIND_PATH(
+    GR_ACOUSTIC_ATTEN_CONVERSIONS_INCLUDE_DIRS
+    NAMES gnuradio/Acoustic_Atten_conversions/api.h
+    HINTS $ENV{ACOUSTIC_ATTEN_CONVERSIONS_DIR}/include
+        ${PC_ACOUSTIC_ATTEN_CONVERSIONS_INCLUDEDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/include
+          /usr/local/include
+          /usr/include
+)
+
+FIND_LIBRARY(
+    GR_ACOUSTIC_ATTEN_CONVERSIONS_LIBRARIES
+    NAMES gnuradio-Acoustic_Atten_conversions
+    HINTS $ENV{ACOUSTIC_ATTEN_CONVERSIONS_DIR}/lib
+        ${PC_ACOUSTIC_ATTEN_CONVERSIONS_LIBDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/lib
+          ${CMAKE_INSTALL_PREFIX}/lib64
+          /usr/local/lib
+          /usr/local/lib64
+          /usr/lib
+          /usr/lib64
+          )
+
+include("${CMAKE_CURRENT_LIST_DIR}/gnuradio-Acoustic_Atten_conversionsTarget.cmake")
+
+INCLUDE(FindPackageHandleStandardArgs)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(GR_ACOUSTIC_ATTEN_CONVERSIONS DEFAULT_MSG GR_ACOUSTIC_ATTEN_CONVERSIONS_LIBRARIES GR_ACOUSTIC_ATTEN_CONVERSIONS_INCLUDE_DIRS)
+MARK_AS_ADVANCED(GR_ACOUSTIC_ATTEN_CONVERSIONS_LIBRARIES GR_ACOUSTIC_ATTEN_CONVERSIONS_INCLUDE_DIRS)

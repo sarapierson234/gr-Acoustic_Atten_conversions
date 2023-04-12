@@ -1,0 +1,51 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/lola/prefix/gnu3.8/acoustics/phaseZero/gr-Acoustic_Atten_conversions/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/lola/anaconda3/envs/gnuradio/bin/ninja cmTC_7c6f9 && [1/2] Building C object CMakeFiles/cmTC_7c6f9.dir/src.c.o
+[2/2] Linking C executable cmTC_7c6f9
+FAILED: cmTC_7c6f9 
+: && /home/lola/anaconda3/envs/gnuradio/bin/x86_64-conda-linux-gnu-cc -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/lola/anaconda3/envs/gnuradio/include -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lola/anaconda3/envs/gnuradio/lib -Wl,-rpath-link,/home/lola/anaconda3/envs/gnuradio/lib -L/home/lola/anaconda3/envs/gnuradio/lib CMakeFiles/cmTC_7c6f9.dir/src.c.o -o cmTC_7c6f9   && :
+/home/lola/anaconda3/envs/gnuradio/bin/../lib/gcc/x86_64-conda-linux-gnu/10.4.0/../../../../x86_64-conda-linux-gnu/bin/ld: CMakeFiles/cmTC_7c6f9.dir/src.c.o: in function `main':
+src.c:(.text.startup.main+0x24): undefined reference to `pthread_create'
+/home/lola/anaconda3/envs/gnuradio/bin/../lib/gcc/x86_64-conda-linux-gnu/10.4.0/../../../../x86_64-conda-linux-gnu/bin/ld: src.c:(.text.startup.main+0x2e): undefined reference to `pthread_detach'
+/home/lola/anaconda3/envs/gnuradio/bin/../lib/gcc/x86_64-conda-linux-gnu/10.4.0/../../../../x86_64-conda-linux-gnu/bin/ld: src.c:(.text.startup.main+0x38): undefined reference to `pthread_cancel'
+/home/lola/anaconda3/envs/gnuradio/bin/../lib/gcc/x86_64-conda-linux-gnu/10.4.0/../../../../x86_64-conda-linux-gnu/bin/ld: src.c:(.text.startup.main+0x44): undefined reference to `pthread_join'
+/home/lola/anaconda3/envs/gnuradio/bin/../lib/gcc/x86_64-conda-linux-gnu/10.4.0/../../../../x86_64-conda-linux-gnu/bin/ld: src.c:(.text.startup.main+0x50): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/lola/prefix/gnu3.8/acoustics/phaseZero/gr-Acoustic_Atten_conversions/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/lola/anaconda3/envs/gnuradio/bin/ninja cmTC_5f779 && [1/2] Building C object CMakeFiles/cmTC_5f779.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_5f779
+FAILED: cmTC_5f779 
+: && /home/lola/anaconda3/envs/gnuradio/bin/x86_64-conda-linux-gnu-cc -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/lola/anaconda3/envs/gnuradio/include -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/lola/anaconda3/envs/gnuradio/lib -Wl,-rpath-link,/home/lola/anaconda3/envs/gnuradio/lib -L/home/lola/anaconda3/envs/gnuradio/lib CMakeFiles/cmTC_5f779.dir/CheckFunctionExists.c.o -o cmTC_5f779  -lpthreads && :
+/home/lola/anaconda3/envs/gnuradio/bin/../lib/gcc/x86_64-conda-linux-gnu/10.4.0/../../../../x86_64-conda-linux-gnu/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+

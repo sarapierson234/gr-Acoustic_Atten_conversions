@@ -1,0 +1,18 @@
+# ninja log v5
+1	9	0	python/Acoustic_Atten_conversions/CMakeFiles/copy_module_for_tests	d08440fa971e2284
+1	9	0	/home/lola/prefix/gnu3.8/acoustics/phaseZero/gr-Acoustic_Atten_conversions/build/python/Acoustic_Atten_conversions/CMakeFiles/copy_module_for_tests	d08440fa971e2284
+2	116	1660777365248142733	docs/doxygen/xml	34a096447c0e06d8
+2	116	1660777365248142733	docs/doxygen/html	34a096447c0e06d8
+2	116	1660777365248142733	/home/lola/prefix/gnu3.8/acoustics/phaseZero/gr-Acoustic_Atten_conversions/build/docs/doxygen/xml	34a096447c0e06d8
+2	116	1660777365248142733	/home/lola/prefix/gnu3.8/acoustics/phaseZero/gr-Acoustic_Atten_conversions/build/docs/doxygen/html	34a096447c0e06d8
+9	32	0	CMakeFiles/install.util	f159a9ff229e25d2
+1	10	0	python/Acoustic_Atten_conversions/CMakeFiles/copy_module_for_tests	d08440fa971e2284
+1	10	0	/home/lola/prefix/gnu3.8/acoustics/phaseZero/gr-Acoustic_Atten_conversions/build/python/Acoustic_Atten_conversions/CMakeFiles/copy_module_for_tests	d08440fa971e2284
+1	9	0	python/Acoustic_Atten_conversions/CMakeFiles/copy_module_for_tests	d08440fa971e2284
+1	9	0	/home/lola/prefix/gnu3.8/acoustics/phaseZero/gr-Acoustic_Atten_conversions/build/python/Acoustic_Atten_conversions/CMakeFiles/copy_module_for_tests	d08440fa971e2284
+9	31	0	CMakeFiles/install.util	f159a9ff229e25d2
+2	9	0	python/Acoustic_Atten_conversions/CMakeFiles/copy_module_for_tests	d08440fa971e2284
+2	9	0	/home/lola/prefix/gnu3.8/acoustics/phaseZero/gr-Acoustic_Atten_conversions/build/python/Acoustic_Atten_conversions/CMakeFiles/copy_module_for_tests	d08440fa971e2284
+1	11	0	python/Acoustic_Atten_conversions/CMakeFiles/copy_module_for_tests	d08440fa971e2284
+1	11	0	/home/lola/prefix/gnu3.8/acoustics/phaseZero/gr-Acoustic_Atten_conversions/build/python/Acoustic_Atten_conversions/CMakeFiles/copy_module_for_tests	d08440fa971e2284
+11	37	0	CMakeFiles/install.util	f159a9ff229e25d2

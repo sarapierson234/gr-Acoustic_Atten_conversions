@@ -1,0 +1,2 @@
+qa_dB_reduced_voltage_received 2 0.11406
+---
